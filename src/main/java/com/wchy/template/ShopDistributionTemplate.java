@@ -13,9 +13,7 @@ public class ShopDistributionTemplate {
 	public static void main(String []args) {
 		pushAllMQVshopDistributionItems_V2();
 	}
-	
-	
-	
+
 
 	public static String pushAllMQVshopDistributionItems_V2(){
 		String minMaxSql = "select min(id), max(id) from vshop_distribution_item b left join vshop_info a on a.vshop_id=b.vshop_id where b.`status`=1 and b.is_delete=0 and b.new_item_id is not null ";
